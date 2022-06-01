@@ -1,0 +1,83 @@
+env:
+    psr4Map:
+        App: app
+        HyperfTest: test
+    page: page
+    pageNum: page_num
+controllersConfig:
+    namespacePrefix:
+        - App
+        - Controller
+    classNameSuffix: Controller
+    extends: AbstractController
+    use:
+        - App\Controller\AbstractController
+        - Hyperf\HttpServer\Contract\RequestInterface
+        - Hyperf\HttpServer\Contract\ResponseInterface
+
+servicesConfig:
+    namespacePrefix:
+        - App
+        - Service
+    classNameSuffix: Service
+    extends: AbstractService
+    use:
+        - App\Service\AbstractService
+
+testConfig:
+    namespacePrefix:
+        - HyperfTest
+    classNameSuffix: Test
+    extends: AbstractTestCase
+    use:
+        - HyperfTest\AbstractTestCase
+    httpTestCase:
+        extends: HttpTestCase
+        use:
+            - HyperfTest\HttpTestCase
+
+controllers:
+    Test1.Test:
+        comment: '这是一个测试控制器'
+        see: '具体的内容查看链接'
+        const:
+            SERVER_1: 1
+            SERVER_2: 2
+        properties:
+        functions:
+            -
+                name: queryList1
+                pageable: true
+                comment: '查询列表'
+                route: 'api/get/list'
+                rules:
+                    - 'sinceUpdateTime|required||时间戳'
+                    - 'hierarchyId|required|integer||导航ID'
+                    - 'pageNum|nullable|integer||当前页码'
+                    - 'pageSize|nullable|integer||一页多少条,不能大于1000'
+                messages:
+                    - 'pageSize.integer||页面返回条数只能为整型数字'
+            -   name: queryList2
+                pageable: true
+                comment: '查询列表'
+                route: 'api/get/list'
+                rules:
+                    - 'sinceUpdateTime|required||时间戳'
+                    - 'hierarchyId|required|integer||导航ID'
+                    - 'pageNum|nullable|integer||当前页码'
+                    - 'pageSize|nullable|integer||一页多少条,不能大于1000'
+                messages:
+                    - 'pageSize.integer||页面返回条数只能为整型数字'
+
+            -   name: queryList3
+                pageable: true
+                comment: '查询列表'
+                route: 'api/get/list'
+                rules:
+                    - 'sinceUpdateTime|required||时间戳'
+                    - 'hierarchyId|required|integer||导航ID'
+                    - 'pageNum|nullable|integer||当前页码'
+                    - 'pageSize|nullable|integer||一页多少条,不能大于1000'
+                messages:
+                    - 'pageSize.integer||页面返回条数只能为整型数字'
+
