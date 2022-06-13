@@ -10,6 +10,6 @@ use Hyperf\JsonRpc\JsonRpcTransporter;
 
 return [
     Hyperf\Contract\StdoutLoggerInterface::class => Huanhyperf\Logger\StdoutLoggerFactory::class,
-    Prometheus\Storage\Adapter::class => Hyperf\Metric\Adapter\Prometheus\RedisStorageFactory::class,
+    Prometheus\Storage\Adapter::class => \Huanhyperf\Metric\RedisStorageFactory::class,
     JsonRpcTransporter::class => JsonRpcPoolTransporter::class,
 ];

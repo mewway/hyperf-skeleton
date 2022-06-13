@@ -1,6 +1,6 @@
 <?php
 
-namespace App\RpcService;
+namespace App\RpcService\Provider;
 
 use Hyperf\RpcServer\Annotation\RpcService;
 

@@ -13,6 +13,7 @@ namespace App\Controller;
 
 use App\Component\ContextThrough;
 use App\Component\Worker;
+use App\Event\TestEvent;
 use App\Exception\AppServiceException;
 use Huanhyperf\Logger\Manager;
 use Hyperf\Engine\Coroutine;

@@ -54,7 +54,14 @@ abstract class AbstractJob extends Job
     public function handle()
     {
         ContextThrough::setThrough($this->context);
-        $this->execute();
+        try {
+            $startTime = microtime(true);
+            $this->execute();
+            $endTime = microtime(true);
+            $duration = ($endTime - $startTime);
+        } catch (\Throwable $t) {
+
+        }
     }
 
     abstract public function execute();

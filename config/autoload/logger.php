@@ -10,6 +10,7 @@ use Huanhyperf\Logger\Formatter\ConsoleFormatter;
 use Huanhyperf\Logger\Formatter\ElkFormatter;
 use Huanhyperf\Logger\Handler\StdoutHandler;
 use Huanhyperf\Logger\Handler\SyslogUdpHandler;
+use Huanhyperf\Logger\Formatter\MetricFormatter;
 
 $level = (int) (env('LOG_LEVEL', Monolog\Logger::INFO));
 
@@ -65,6 +66,24 @@ return [
                         'dateFormat' => null,
                     ],
                 ],
+            ],
+        ],
+    ],
+    'metric' => [
+        'handler' => [
+            'class' => SyslogUdpHandler::class,
+            'constructor' => [
+                'host' => '127.0.0.1',
+                'port' => 8001,
+                'level' => \Monolog\Logger::DEBUG,
+            ],
+        ],
+        'formatter' => [
+            'class' => MetricFormatter::class,
+            'constructor' => [
+                'app' => 'huanhyperf-logger-metric',
+                'env' => 'dev',
+                'dateFormat' => null,
             ],
         ],
     ],

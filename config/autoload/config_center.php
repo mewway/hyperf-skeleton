@@ -10,24 +10,22 @@ use Hyperf\ConfigApollo\PullMode;
 use Hyperf\ConfigCenter\Mode;
 
 return [
-    'enable' => (bool) env('CONFIG_CENTER_ENABLE', false),
-    'driver' => env('CONFIG_CENTER_DRIVER', 'apollo'),
-    'mode' => env('CONFIG_CENTER_MODE', Mode::PROCESS),
+    'enable' => (bool) env('APOLLO_ENABLE', false),
+    'driver' => 'apollo',
+    'mode' => Mode::PROCESS,
     'drivers' => [
         'apollo' => [
             'driver' => Hyperf\ConfigApollo\ApolloDriver::class,
             'pull_mode' => PullMode::INTERVAL,
-            'server' => 'http://127.0.0.1:9080',
-            'appid' => 'test',
+            'server' => env('APOLLO_SERVER', 'http://apollo-config.hlgdata.com'),
+            'appid' => env('APOLLO_APP_ID', 'notset'),
             'cluster' => 'default',
-            'namespaces' => [
-                'application',
-            ],
-            'interval' => 5,
-            'strict_mode' => false,
+            'namespaces' => env('APOLLO_NAMESPACE', explode(',', 'application,view')),
+            'interval' => 30,
+            'strict_mode' => true,
             'client_ip' => current(swoole_get_local_ip()),
             'pullTimeout' => 10,
-            'interval_timeout' => 1,
+            'interval_timeout' => 30,
         ],
     ],
 ];

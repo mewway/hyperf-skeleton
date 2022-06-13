@@ -16,8 +16,6 @@
         "huanhyperf/auth": "~2.0.0",
         "huanhyperf/database": "~2.0.0",
         "huanhyperf/dolphin": "~2.1.0",
-        "huanhyperf/hummingbird": "~2.0.0",
-        "huanhyperf/let-maker": "dev-master",
         "huanhyperf/lock": "~2.0.0",
         "huanhyperf/logger": "~2.1.0",
         "huanhyperf/metric": "dev-master",
@@ -43,6 +41,7 @@
         "hyperf/validation": "~2.2.0"
     },
     "require-dev": {
+        "huanhyperf/let-maker": "dev-master",
         "friendsofphp/php-cs-fixer": "^3.0",
         "hyperf/devtool": "~2.2.0",
         "hyperf/ide-helper": "~2.2.0",

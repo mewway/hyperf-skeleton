@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 return [
     'http' => [
-//        \Hyperf\Metric\Middleware\MetricMiddleware::class,
+        \Hyperf\Metric\Middleware\MetricMiddleware::class,
         \App\Middleware\TraceableMiddleware::class,
     ],
 ];
