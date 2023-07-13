@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa060b9eaffa17c6418d7ce5a58fd812",
+    "content-hash": "7d749e51df8b3711d237f5d4e5c765a3",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -7467,8 +7467,8 @@
             "version": "dev-master",
             "dist": {
                 "type": "path",
-                "url": "/Volumes/ROG/Library/devtool",
-                "reference": "084dd95c5a1eefe215153c8bc1318a0e6d6f4361"
+                "url": "/Volumes/ROG/Projects/devtool",
+                "reference": "f4a6feb905a803fd122f85949209282942b0c3f9"
             },
             "require": {
                 "hyperf/command": "~2.2.0",
@@ -7768,16 +7768,16 @@
         },
         {
             "name": "nette/php-generator",
-            "version": "v3.6.6",
+            "version": "v3.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/php-generator.git",
-                "reference": "ad7d0a77f58260001bd263605eb2b9fbaf1d61a7"
+                "reference": "b9ba414c9895fd9420887f20eeb4eabde123677f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/php-generator/zipball/ad7d0a77f58260001bd263605eb2b9fbaf1d61a7",
-                "reference": "ad7d0a77f58260001bd263605eb2b9fbaf1d61a7",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/b9ba414c9895fd9420887f20eeb4eabde123677f",
+                "reference": "b9ba414c9895fd9420887f20eeb4eabde123677f",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -7836,9 +7836,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/php-generator/issues",
-                "source": "https://github.com/nette/php-generator/tree/v3.6.6"
+                "source": "https://github.com/nette/php-generator/tree/v3.6.7"
             },
-            "time": "2022-02-20T18:06:09+00:00"
+            "time": "2022-03-10T01:51:00+00:00"
         },
         {
             "name": "nette/utils",

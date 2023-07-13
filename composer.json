@@ -1,5 +1,5 @@
 {
-    "name": "hlg/hyperf-skeleton",
+    "name": "huanhyperf/hyperf-skeleton",
     "type": "project",
     "keywords": [
         "php",
@@ -106,7 +106,7 @@
         },
         "huanhyperf/devtool": {
             "type": "path",
-            "url": "/Volumes/ROG/Library/devtool"
+            "url": "/Volumes/ROG/Projects/devtool"
         }
     }
 }
